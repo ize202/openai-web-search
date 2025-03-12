@@ -7,7 +7,8 @@ client = OpenAI(
 
 response = client.responses.create(
     model="gpt-4o",
-    input="Write a one-sentence bedtime story about a unicorn."
+    tools=[{"type": "web_search_preview"}],
+    input="nba eastern conference standings"
 )
 
 print(response.output_text)
